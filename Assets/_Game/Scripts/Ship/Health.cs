@@ -10,8 +10,13 @@ namespace Ship
         
         public void TakeDamage(int damage)
         { 
-            Debug.Log("Took some damage");
+            Debug.Log(_health);
             _health = Mathf.Max(MIN_HEALTH, _health - damage);
+
+            if (_health <= 0)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }

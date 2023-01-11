@@ -20,6 +20,7 @@ namespace Ship
                 //_healthRef.ApplyChange(-1);
                 //_onHealthChangedEvent.Raise(_healthRef);
                 _healthObservable.ApplyChange(-1);
+                gameObject.GetComponent<Health>().TakeDamage(1);
             }
         }
     }
