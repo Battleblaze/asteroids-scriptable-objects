@@ -47,7 +47,7 @@ namespace UI
         
         public void SetScoreText(int scoreint)
         {
-            _scoreText.text = "Asteroids Destoyed:" + scoreint.ToString();
+            _scoreText.text = "Asteroids Destoyed: " + scoreint.ToString();
         }
         
         public void SetTimerText()
