@@ -10,14 +10,8 @@ namespace Asteroids
     public class Asteroid : MonoBehaviour
     {
         [SerializeField] private ScriptableEventInt _onAsteroidDestroyed;
-        
-        [Header("Config:")]
-        [SerializeField] private float _minForce;
-        [SerializeField] private float _maxForce;
-        [SerializeField] private float _minSize;
-        [SerializeField] private float _maxSize;
-        [SerializeField] private float _minTorque;
-        [SerializeField] private float _maxTorque;
+
+        public AsteroidType _type;
 
         [Header("References:")]
         [SerializeField] private Transform _shape;
@@ -87,13 +81,21 @@ namespace Asteroids
 
         private void AddForce()
         {
-            var force = Random.Range(_minForce, _maxForce);
+            if (_type == null)
+            {
+                return;
+            }
+            var force = Random.Range(_type._minForce, _type._maxForce);
             _rigidbody.AddForce( _direction * force, ForceMode2D.Impulse);
         }
 
         private void AddTorque()
         {
-            var torque = Random.Range(_minTorque, _maxTorque);
+            if (_type == null)
+            {
+                return;
+            }
+            var torque = Random.Range(_type._minTorque, _type._maxTorque);
             var roll = Random.Range(0, 2);
 
             if (roll == 0)
@@ -104,7 +106,11 @@ namespace Asteroids
 
         private void SetSize()
         {
-            var size = Random.Range(_minSize, _maxSize);
+            if (_type == null)
+            {
+                return;
+            }
+            var size = Random.Range(_type._minSize, _type._maxSize);
             _shape.localScale = new Vector3(size, size, 0f);
         }
     }
