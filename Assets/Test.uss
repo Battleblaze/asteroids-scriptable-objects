@@ -1,0 +1,6 @@
+.unity-toggle {
+}
+
+.section {
+    --unity-colors-default-background: rgba(165, 165, 165, 0.8);
+}

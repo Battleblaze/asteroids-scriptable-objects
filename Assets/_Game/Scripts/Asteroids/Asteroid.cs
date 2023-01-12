@@ -1,4 +1,5 @@
 using DefaultNamespace.ScriptableEvents;
+using UI;
 using UnityEngine;
 using Variables;
 using Random = UnityEngine.Random;
@@ -25,6 +26,8 @@ namespace Asteroids
         private Vector3 _direction;
         private int _instanceId;
 
+        private UIscript _uIscript;
+
         private void Start()
         {
             _rigidbody = GetComponent<Rigidbody2D>();
@@ -34,6 +37,8 @@ namespace Asteroids
             AddForce();
             AddTorque();
             SetSize();
+
+            _uIscript = GameObject.Find("UI").GetComponent<UIscript>();
         }
         
         private void OnTriggerEnter2D(Collider2D other)
@@ -47,6 +52,7 @@ namespace Asteroids
         private void HitByLaser()
         {
             _onAsteroidDestroyed.Raise(_instanceId);
+            _uIscript.SetScoreText(_uIscript.score += 1 );
             Destroy(gameObject);
         }
 

@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/Test.uss?fileID=7433441132597879392&amp;guid=01a0f4ac81afa904db50536dd14eb2d6&amp;type=3#Test" />
+    <ui:Label tabindex="-1" text="ToolKit" display-tooltip-when-elided="true" />
+    <ui:Slider picking-mode="Ignore" label="Astroid speed" value="50" high-value="100" name="Speed" style="height: 4px;" />
+    <ui:Toggle label="Godmode" value="false" style="align-items: auto;" />
+</ui:UXML>

@@ -6,7 +6,7 @@ using Variables;
 
 namespace UI
 {
-    public class UI : MonoBehaviour
+    public class UIscript : MonoBehaviour
     {
         [Header("Health:")]
         [SerializeField] private IntVariable _healthVar;
@@ -21,10 +21,18 @@ namespace UI
         
         [Header("Laser:")]
         [SerializeField] private TextMeshProUGUI _laserText;
+
+        public int score = 0;
+        public int lasersshot;
         
         private void Start()
         {
             SetHealthText($"Health: {_healthVar.Value}");
+        }
+
+        private void Update()
+        {
+            SetTimerText();
         }
 
         public void OnHealthChanged(IntReference newValue)
@@ -37,19 +45,19 @@ namespace UI
             _healthText.text = text;
         }
         
-        private void SetScoreText(string text)
+        public void SetScoreText(int scoreint)
         {
-            _scoreText.text = text;
+            _scoreText.text = "Asteroids Destoyed:" + scoreint.ToString();
         }
         
-        private void SetTimerText(string text)
+        public void SetTimerText()
         {
-            _timerText.text = text;
+            _timerText.text ="Time: " + Convert.ToInt32(Time.timeSinceLevelLoad);
         }
         
-        private void SetLaserText(string text)
+        public void SetLaserText(int laserint)
         {
-            _laserText.text = text;
+            _laserText.text = "Lasers Shot: " + laserint.ToString();
         }
     }
 }

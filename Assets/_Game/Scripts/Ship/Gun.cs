@@ -1,4 +1,5 @@
 using System;
+using UI;
 using UnityEngine;
 
 namespace Ship
@@ -6,6 +7,13 @@ namespace Ship
     public class Gun : MonoBehaviour
     {
         [SerializeField] private Laser _laserPrefab;
+
+        private UIscript _uIscript;
+
+        private void Start()
+        {
+            _uIscript = GameObject.Find("UI").GetComponent<UIscript>();
+        }
 
         private void Update()
         {
@@ -15,8 +23,10 @@ namespace Ship
         
         private void Shoot()
         {
+            
             var trans = transform;
             Instantiate(_laserPrefab, trans.position, trans.rotation);
+            _uIscript.SetLaserText(_uIscript.lasersshot += 1);
         }
     }
 }
