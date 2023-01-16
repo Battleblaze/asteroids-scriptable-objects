@@ -1,3 +1,4 @@
+using System;
 using DefaultNamespace.ScriptableEvents;
 using UnityEngine;
 using Variables;
@@ -10,6 +11,8 @@ namespace Ship
         [SerializeField] private ScriptableEventIntReference _onHealthChangedEvent;
         [SerializeField] private IntReference _healthRef;
         [SerializeField] private IntObservable _healthObservable;
+
+        public AsteroidType _type;
         
         private void OnCollisionEnter2D(Collision2D other)
         {
@@ -20,7 +23,7 @@ namespace Ship
                 //_healthRef.ApplyChange(-1);
                 //_onHealthChangedEvent.Raise(_healthRef);
                 _healthObservable.ApplyChange(-1);
-                gameObject.GetComponent<Health>().TakeDamage(1);
+                gameObject.GetComponent<Health>().TakeDamage(Convert.ToInt32(_type.damage));
             }
         }
     }

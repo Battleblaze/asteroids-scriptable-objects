@@ -1,6 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
-    <Style src="project://database/Assets/Test.uss?fileID=7433441132597879392&amp;guid=01a0f4ac81afa904db50536dd14eb2d6&amp;type=3#Test" />
-    <ui:Label tabindex="-1" text="ToolKit" display-tooltip-when-elided="true" />
-    <ui:Slider picking-mode="Ignore" label="Astroid speed" value="50" high-value="100" name="Speed" style="height: 4px;" />
-    <ui:Toggle label="Godmode" value="false" style="align-items: auto;" />
+    <Style src="project://database/Assets/usstest.uss?fileID=7433441132597879392&amp;guid=7181c40162244cc45a3fa2794d64f877&amp;type=3#usstest" />
+    <ui:Label tabindex="-1" text="Asteroid Tool" display-tooltip-when-elided="true" name="Label" />
+    <ui:Slider picking-mode="Ignore" label="Damage" value="50" high-value="10" name="Damage" binding-path="damage" style="height: 55px;" />
+    <ui:MinMaxSlider picking-mode="Ignore" label="Force" min-value="1" max-value="2" low-limit="1" high-limit="15" name="ForceSlider" />
 </ui:UXML>
