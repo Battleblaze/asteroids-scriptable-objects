@@ -1,3 +1,4 @@
+using System;
 using DefaultNamespace.ScriptableEvents;
 using UI;
 using UnityEngine;
@@ -113,5 +114,6 @@ namespace Asteroids
             var size = Random.Range(_type._minSize, _type._maxSize);
             _shape.localScale = new Vector3(size, size, 0f);
         }
+
     }
 }

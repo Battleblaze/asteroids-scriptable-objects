@@ -1,6 +1,10 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/usstest.uss?fileID=7433441132597879392&amp;guid=7181c40162244cc45a3fa2794d64f877&amp;type=3#usstest" />
-    <ui:Label tabindex="-1" text="Asteroid Tool" display-tooltip-when-elided="true" name="Label" />
-    <ui:Slider picking-mode="Ignore" label="Damage" value="50" high-value="10" name="Damage" binding-path="damage" style="height: 55px;" />
-    <ui:MinMaxSlider picking-mode="Ignore" label="Force" min-value="1" max-value="2" low-limit="1" high-limit="15" name="ForceSlider" />
+    <ui:Label tabindex="-1" text="Asteroid Tool" display-tooltip-when-elided="true" name="Label" style="left: auto; -unity-text-align: upper-center; -unity-font: url(&apos;project://database/Assets/TextMesh%20Pro/Fonts/LiberationSans.ttf?fileID=12800000&amp;guid=e3265ab4bf004d28a9537516768c1c75&amp;type=3#LiberationSans&apos;); -unity-font-style: bold; color: rgb(0, 253, 35); font-size: 32px;" />
+    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+        <ui:Slider picking-mode="Ignore" label="Damage" value="50" high-value="10" name="Damage" binding-path="damage" style="height: 19px; width: 389px;" />
+        <ui:FloatField value="0" is-delayed="true" readonly="true" binding-path="damage" style="justify-content: center; align-items: flex-start; height: 34px; width: 40px; align-self: center;" />
+    </ui:VisualElement>
+    <ui:Slider picking-mode="Ignore" label="maxforce" value="42" high-value="100" />
+    <ui:Slider picking-mode="Ignore" label="minforce" value="42" high-value="100" />
 </ui:UXML>
