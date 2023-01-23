@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73b836ec46856894392f33a92c0306ae, type: 3}
   m_Name: LargeAsteriod
   m_EditorClassIdentifier: 
-  _minForce: 0.4
-  _maxForce: 4.42
+  _minForce: 1.3
+  _maxForce: 7.2
   _minSize: 0.09
   _maxSize: 0.57
-  _minTorque: -3.52
-  _maxTorque: -7.51
+  _minTorque: 3.2
+  _maxTorque: 10.2
   _force: {x: 0, y: 0}
-  damage: 4.25
+  damage: 2.68
   color: {r: 1, g: 1, b: 1, a: 0}

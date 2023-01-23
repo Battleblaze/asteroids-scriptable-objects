@@ -3,8 +3,12 @@
     <ui:Label tabindex="-1" text="Asteroid Tool" display-tooltip-when-elided="true" name="Label" style="left: auto; -unity-text-align: upper-center; -unity-font: url(&apos;project://database/Assets/TextMesh%20Pro/Fonts/LiberationSans.ttf?fileID=12800000&amp;guid=e3265ab4bf004d28a9537516768c1c75&amp;type=3#LiberationSans&apos;); -unity-font-style: bold; color: rgb(0, 253, 35); font-size: 32px;" />
     <ui:Slider picking-mode="Ignore" label="Damage" value="50" high-value="10" name="Damage" binding-path="damage" style="height: 19px; width: 389px;" />
     <ui:FloatField value="0" is-delayed="true" readonly="true" binding-path="damage" style="justify-content: center; align-items: flex-start; height: 34px; width: 40px; align-self: center;" />
-    <ui:Slider picking-mode="Ignore" label="maxforce" value="42" high-value="100" name="maxforace" style="height: -58px;" />
-    <ui:Slider picking-mode="Ignore" label="minforce" value="42" high-value="100" name="minforce" />
-    <ui:Slider picking-mode="Ignore" label="maxTorque" value="42" high-value="100" name="maxtourqe" binding-path="_maxTorque" />
-    <ui:Slider picking-mode="Ignore" label="minTorque" value="42" high-value="100" name="mintourqe" binding-path="_minTorque" />
+    <ui:Slider picking-mode="Ignore" label="maxforce" value="42" high-value="50" name="maxforace" binding-path="_maxForce" style="height: -58px;" />
+    <ui:FloatField value="42,2" binding-path="_maxForce" style="height: 37px; width: 40px; align-self: center; justify-content: center;" />
+    <ui:Slider picking-mode="Ignore" label="minforce" value="42" high-value="50" name="minforce" binding-path="_minForce" />
+    <ui:FloatField value="42,2" binding-path="_minForce" style="height: 35px; width: 41px; align-self: center; justify-content: center;" />
+    <ui:Slider picking-mode="Ignore" label="maxTorque" value="42" high-value="50" name="maxtourqe" binding-path="_maxTorque" />
+    <ui:FloatField value="42,2" binding-path="_maxTorque" style="height: 41px; width: 36px; align-self: center; justify-content: center;" />
+    <ui:Slider picking-mode="Ignore" label="minTorque" value="42" high-value="50" name="mintourqe" binding-path="_minTorque" />
+    <ui:FloatField value="42,2" binding-path="_minTorque" style="height: 37px; width: 38px; align-self: center; justify-content: center;" />
 </ui:UXML>
